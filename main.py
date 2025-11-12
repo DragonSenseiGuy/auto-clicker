@@ -46,7 +46,7 @@ class AutoClicker:
         click_type_frame.grid(row=1, column=1, sticky="w", pady=5)
 
         ttk.Radiobutton(click_type_frame, text="Left Click", variable=self.click_type_var,
-                      value="left", command=self.update_click_type).pack(side=tk.Left, padx=(0,10))
+                      value="left", command=self.update_click_type).pack(side=tk.LEFT, padx=(0,10))
         ttk.Radiobutton(click_type_frame, text="Right Click", variable=self.click_type_var, 
                        value="right", command=self.update_click_type).pack(side=tk.LEFT)
 
@@ -71,13 +71,13 @@ class AutoClicker:
         self.hotkey_entry = ttk.Entry(hotkey_frame, textvariable=self.hotkey_var, width=5)
         self.hotkey_entry.pack(side=tk.LEFT, padx=(0,10))
 
-        ttk.Button(hotkey_frame, text="Set", command=self.set_hotkey).pack(side=tk.LEFT)
+        ttk.Button(hotkey_frame, text="Set", command=self.update_hotkey).pack(side=tk.LEFT)
 
         # Status Display
         status_frame = ttk.LabelFrame(main_frame, text="Status", padding="10")
         status_frame.grid(row=4, column=0, columnspan=2, sticky="ew", pady=20)
 
-        self.status_label = ttk.LabelFrame(status_frame, text="Stopped", font=("Arial", 12))
+        self.status_label = ttk.Label(status_frame, text="Stopped", font=("Arial", 12))
         self.status_label.pack()
 
         self.info_label = ttk.Label(status_frame, text="Press * to toggle", font=("Arial", 10))
@@ -159,3 +159,31 @@ class AutoClicker:
                 time.sleep(delay)
             else:
                 time.sleep(0.1)
+
+    def toggle_event(self, key):
+        try:
+            if hasattr(key, 'char') and key.char == self.hotkey:
+                if self.clicking:
+                    self.stop_clicking()
+                else:
+                    self.start_clicking()
+        except AttributeError:
+            pass
+
+    def setup_hotkey_listener(self):
+        self.keyboard_listener = Listener(on_press=self.toggle_event)
+        self.keyboard_listener.start()
+
+    def run(self):
+        try:
+            self.root.mainloop()
+        except KeyboardInterrupt:
+            pass
+        finally:
+            self.clicking = False
+            if self.keyboard_listener:
+                self.keyboard_listener.stop()
+
+if __name__ == "__main__":
+    app = AutoClicker()
+    app.run()
