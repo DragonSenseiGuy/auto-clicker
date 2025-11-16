@@ -14,6 +14,23 @@ Okay, enough talking tell me what this can actually do.
 
 ## Installation(Not app, will be released soon)
 
+Make a virtual environment
+```
+python3 -m venv .venv
+```
+
+Activate virtual environment
+
+Windows:
+```
+.venv\Scripts\activate
+```
+
+Linux/macOS:
+```
+source .venv/bin/activate
+```
+
 ### Install dependencies
 ```
 uv sync
