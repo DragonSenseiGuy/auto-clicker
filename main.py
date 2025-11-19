@@ -1,5 +1,13 @@
 import time
 import threading
+import os
+import sys
+
+if getattr(sys, "frozen", False):
+    base = sys._MEIPASS
+    os.environ["TCL_LIBRARY"] = os.path.join(base, "tcl8.6")
+    os.environ["TK_LIBRARY"] = os.path.join(base, "tk8.6")
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 from pynput.mouse import Controller, Button
