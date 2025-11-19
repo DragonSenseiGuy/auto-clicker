@@ -12,7 +12,7 @@ Okay, enough talking tell me what this can actually do.
 - Good loking GUI(for a autoclicker)
 - Status of the auto-clicker
 
-## Installation(Not app, will be released soon)
+## Installation
 
 Make a virtual environment
 ```
