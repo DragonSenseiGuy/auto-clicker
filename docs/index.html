@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Clicker</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        code, pre {
+            background-color: #ecf0f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9em;
+            color: #2c3e50;
+        }
+        pre {
+            display: block;
+            padding: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Auto Clicker</h1>
+            <p>A free and open-source auto clicker</p>
+        </header>
+
+        <section id="about">
+            <h2>About Auto Clicker</h2>
+            <p>Auto Clicker is a free and open-source application designed to automate mouse clicks. It helps users perform repetitive clicking tasks with ease, offering customization options for click type, rate, and activation hotkeys.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Support for left and right clicking</li>
+                <li>Configurable click rate (clicks per second)</li>
+                <li>Customizable hotkey for activation and deactivation</li>
+                <li>Intuitive Graphical User Interface (GUI)</li>
+                <li>Displays the current status of the auto-clicker (active/inactive)</li>
+            </ul>
+        </section>
+
+        <section id="setup">
+            <h2>Installation & Usage</h2>
+            <p>Follow these steps to get the Auto Clicker up and running:</p>
+
+            <h3>1. Download the Application</h3>
+            <p>Download the latest version of Auto Clicker <a href="https://hc-cdn.hel1.your-objectstorage.com/s/v3/d7694170bd408fa65a2f9697e7ce42c74eb7e887_main" target="_blank">here</a>.This build is only tested on macOS.</p>
+
+            <h3>2. Run the application (from source)</h3>
+            <p>If you prefer to run from source, first install the dependencies:</p>
+            <pre><code>uv sync</code></pre>
+            <p>Then, run the application:</p>
+            <pre><code>uv python run main.py</code></pre>
+
+            <h3>3. How to Use</h3>
+            <ol>
+                <li>Configure your settings:
+                    <ul>
+                        <li>Select click type (Left or Right)</li>
+                        <li>Adjust clicks per second using the slider</li>
+                        <li>Set your preferred hotkey (optional)</li>
+                    </ul>
+                </li>
+                <li>Start auto clicking:
+                    <ul>
+                        <li>Click the "Start" button, or</li>
+                        <li>Press your configured hotkey (default: <code>*</code>)</li>
+                    </ul>
+                </li>
+                <li>Stop auto clicking:
+                    <ul>
+                        <li>Click the "Stop" button, or</li>
+                        <li>Press your hotkey again to toggle</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+
+
+        <section id="contribute">
+            <h2>Contributing</h2>
+            <p>We welcome contributions to Hack Review! If you'd like to help improve the project:</p>
+            <ol>
+                <li>Fork the repository on GitHub.</li>
+                <li>Create a new branch for your features or bug fixes.</li>
+                <li>Implement your changes.</li>
+                <li>Open a pull request detailing your contributions.</li>
+            </ol>
+        </section>
+        <section id="screenshots">
+            <h2>Screenshots</h2>
+            <p>Screenshots of the Project</p>
+            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/871580e8d5f717f70ffc0cbbed33b61c536ec767_screenshot_2025-11-19_at_4.31.11___pm.png">
+        </section>
+
+        <footer>
+            <p>&copy; 2025 DragonSenseiGuy. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
